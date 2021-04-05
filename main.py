@@ -14,7 +14,8 @@ sad_words = ['sad','depressed', 'unhappy','angry', 'miserable', 'depressing']
 starter_encouragements = [
   "Cheer up!",
   "Hang in there",
-  "You are a great person/Bot!"
+  "You are a great person/Bot!",
+  "You are Cheer leader"
 ]
 if 'responding' not in db.keys():
   db['responding'] = True
