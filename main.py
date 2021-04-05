@@ -9,7 +9,9 @@ from keep_alive import keep_alive
 client = discord.Client()
 
 
-sad_words = ['sad','depressed', 'unhappy','angry', 'miserable', 'depressing']
+sad_words = [
+  'sad','depressed', 'unhappy','angry', 'miserable', 'depressing','bitter', 'dismal','heartbroken','melancholy','pessimistic','somber','sorry','wistful','blue', 'down', 'hurting','not feeling good', 'not feelin good',"don't like",'stressed', 'helpless', 'hopeless', 'dying','feeling bad','not feeling well','sick','not perfect','dull'
+  ]
 
 starter_encouragements = [
   "Cheer up!",
@@ -52,9 +54,9 @@ async def on_message(message):
 
   msg = message.content
 
-  if msg.startswith('$hello'):
+  if msg.startswith('$hello') or msg.startswith('$hi'):
     await message.channel.send('Hello!')
-  if msg.startswith('$inspire'):
+  if msg.startswith('$inspire') or msg.startswith('inspire me'):
     quote = get_quote()
     await message.channel.send(quote)
   if db['responding']:
